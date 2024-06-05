@@ -1,0 +1,73 @@
+// Remove original cross compiler path and recreate a new cross compiler path
+rm -rf /etc/xcompile
+mkdir /etc/xcompile
+cd /etc/xcompile
+
+// download cross compilers
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/arc_gnu_2023.09_prebuilt_uclibc_le_arc700_linux_install.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-armv4eb.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-armv4l.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-armv4tl.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-armv5l.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-armv6l.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-armv7l.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-i486.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-i586.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-i686.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-m68k.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-mips.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-mips64.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-mipsel.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-powerpc.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-powerpc-440fp.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-sh2elf.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-sh4.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-sparc.tar.bz2
+wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-x86_64.tar.bz2
+
+// untar the compressed files
+tar -xf arc_gnu_2023.09_prebuilt_uclibc_le_arc700_linux_install.tar.bz2
+tar -xf cross-compiler-armv4eb.tar.bz2
+tar -xf cross-compiler-armv4l.tar.bz2
+tar -xf cross-compiler-armv4tl.tar.bz2
+tar -xf cross-compiler-armv5l.tar.bz2
+tar -xf cross-compiler-armv6l.tar.bz2
+tar -xf cross-compiler-armv7l.tar.bz2
+tar -xf cross-compiler-i486.tar.bz2
+tar -xf cross-compiler-i586.tar.bz2
+tar -xf cross-compiler-i686.tar.bz2
+tar -xf cross-compiler-m68k.tar.bz2
+tar -xf cross-compiler-mips.tar.bz2
+tar -xf cross-compiler-mips64.tar.bz2
+tar -xf cross-compiler-mipsel.tar.bz2
+tar -xf cross-compiler-powerpc.tar.bz2
+tar -xf cross-compiler-powerpc-440fp.tar.bz2
+tar -xf cross-compiler-sh2elf.tar.bz2
+tar -xf cross-compiler-sh4.tar.bz2
+tar -xf cross-compiler-sparc.tar.bz2
+tar -xf cross-compiler-x86_64.tar.bz2
+
+// rename the original architecture's cross compiler folder to just the architecture's primary name
+mv arc_gnu_2023.09_prebuilt_uclibc_le_arc700_linux_install
+mv cross-compiler-armv4eb armv4eb
+mv cross-compiler-armv4l armv4l
+mv cross-compiler-armv4tl armv4tl
+mv cross-compiler-armv5l armv5l
+mv cross-compiler-armv6l armv6l
+mv cross-compiler-armv7l armv7l
+mv cross-compiler-i486 i486
+mv cross-compiler-i586 i586
+mv cross-compiler-i686 i686
+mv cross-compiler-m68k m68k
+mv cross-compiler-mips mips
+mv cross-compiler-mips64 mips64
+mv cross-compiler-mipsel mipsel
+mv cross-compiler-powerpc powerpc
+mv cross-compiler-powerpc-440fp powerpc-440fp
+mv cross-compiler-sh2elf sh2elf
+mv cross-compiler-sh4 sh4
+mv cross-compiler-sparc sparc
+mv cross-compiler-x86_64 x86_64
+
+// remove the compressed files
+rm -rf *.tar.bz2
