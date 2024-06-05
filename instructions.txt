@@ -4,7 +4,6 @@ mkdir /etc/xcompile
 cd /etc/xcompile
 
 // download cross compilers
-wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/arc_gnu_2023.09_prebuilt_uclibc_le_arc700_linux_install.tar.bz2
 wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-armv4eb.tar.bz2
 wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-armv4l.tar.bz2
 wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-armv4tl.tar.bz2
@@ -26,7 +25,6 @@ wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cr
 wget https://github.com/tcps0ck3tz/architecture_cross_compilers_2024/raw/main/cross-compiler-x86_64.tar.bz2
 
 // untar the compressed files
-tar -xf arc_gnu_2023.09_prebuilt_uclibc_le_arc700_linux_install.tar.bz2
 tar -xf cross-compiler-armv4eb.tar.bz2
 tar -xf cross-compiler-armv4l.tar.bz2
 tar -xf cross-compiler-armv4tl.tar.bz2
@@ -48,7 +46,6 @@ tar -xf cross-compiler-sparc.tar.bz2
 tar -xf cross-compiler-x86_64.tar.bz2
 
 // rename the original architecture's cross compiler folder to just the architecture's primary name
-mv arc_gnu_2023.09_prebuilt_uclibc_le_arc700_linux_install
 mv cross-compiler-armv4eb armv4eb
 mv cross-compiler-armv4l armv4l
 mv cross-compiler-armv4tl armv4tl
